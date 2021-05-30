@@ -2,8 +2,7 @@
 
 1. cd folder
 2. yarn
-3. yarn lint
-4. yarn start
+3. yarn start
 
 # NOTES
 
