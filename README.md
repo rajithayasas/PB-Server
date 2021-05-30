@@ -19,3 +19,7 @@
 - POST `/api/v1/albums/save`
 - PUT `/api/v1/albums/update`
 - DELETE `/api/v1/albums/{id}`
+
+# Postman Documentation
+
+https://documenter.getpostman.com/view/967574/TzXzDxPD
