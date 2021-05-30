@@ -1,5 +1,3 @@
-# Important - Please use yarn instead of npm
-
 # How to run - development
 
 1. cd folder
@@ -10,6 +8,7 @@
 # NOTES
 
 - Application will start on port 3333 - use env variable file to change this if needed
+- Replace the .env file content with the given configuration
 
 # The `api` uri preceed all API endpoints and the following endpoints are currently available
 
