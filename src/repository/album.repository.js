@@ -42,11 +42,7 @@ const editAlbum = async (id, entries) => {
     );
 
     if (albumData) {
-      return {
-        status: true,
-        message: 'Album succesfull updated',
-        albumData,
-      };
+      return albumData;
     }
 
     throw new APIError({
@@ -97,15 +93,15 @@ const saveAlbum = async (userId, entries) => {
 
 /** Delete Album
  * Return: Album Obj
- * @param { String } userId
+ * @param { String } _id
  */
-const deleteAlbum = async (id) => {
+const deleteAlbum = async (_id) => {
   let session = null;
   try {
     session = await mongoose.startSession();
     session.startTransaction();
 
-    const removePO = await AlbumModel.remove({ _id: id }, { session });
+    const removePO = await AlbumModel.remove({ _id }, { session });
     if (!removePO) throw new Error('Oops! Something went wrong. Album is not removed');
 
     await session.commitTransaction();
